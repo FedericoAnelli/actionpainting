@@ -55,7 +55,46 @@
 
 // Text decoration for menu items
 .menuItemsStyling{
+    position: relative;
     font-family: $fontFamilyMain;
     font-size: $fontSizeMenu;
     font-weight: $fontWeightMenu;
+}
+
+// Strikthrough effect style
+.menuYellowStrikethrough{
+    height: 50%;
+    width: 100%;
+    background-color: $yellowColor;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    animation-name: strikethroughAnimation;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+
+.menuYellowStrikethroughOut{
+    height: 50%;
+    width: 0%;
+    background-color: $yellowColor;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    animation-name: strikethroughAnimationOut;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes strikethroughAnimation{
+    0%{width: 0;}
+    100%{width: 100%;}
+}
+
+@keyframes strikethroughAnimationOut{
+    0%{width: 100%;}
+    100%{width: 0%}
+    
 }

@@ -71,9 +71,80 @@
 }
 
 .menuItemsStyling {
+  position: relative;
   font-family: "Outfit", sans-serif;
   font-size: medium;
   font-weight: 500;
+}
+
+.menuYellowStrikethrough {
+  height: 50%;
+  width: 100%;
+  background-color: #f1c744;
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  -webkit-animation-name: strikethroughAnimation;
+          animation-name: strikethroughAnimation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.menuYellowStrikethroughOut {
+  height: 50%;
+  width: 0%;
+  background-color: #f1c744;
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  -webkit-animation-name: strikethroughAnimationOut;
+          animation-name: strikethroughAnimationOut;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes strikethroughAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes strikethroughAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes strikethroughAnimationOut {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes strikethroughAnimationOut {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
 }
 
 .homepageContainer {
@@ -133,6 +204,7 @@
   width: 15vw;
   height: 8vh;
   background-color: #f1c744;
+  cursor: pointer;
 }
 
 .aboutUsMainContainer {
@@ -367,5 +439,7 @@ li {
 
 a {
   text-decoration: none;
+  color: #323031;
+  z-index: 1;
 }
 /*# sourceMappingURL=style.css.map */
