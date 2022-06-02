@@ -170,6 +170,14 @@
   font-family: "Outfit", sans-serif;
 }
 
+.aboutUsTopParagraph {
+  font-size: large;
+}
+
+.aboutUsHeading {
+  font-size: xx-large;
+}
+
 .aboutUsYellowLine {
   background-color: #f1c744;
   width: 30%;
