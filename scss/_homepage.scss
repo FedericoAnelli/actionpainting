@@ -1,0 +1,47 @@
+// Main container for homepage section
+.homepageContainer{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+
+}
+
+// Div for text "We are your best choice"
+.homepageTextDiv{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10vw !important;
+    padding-right: 10vw !important;
+}
+
+.homepageHeaderStyling{
+    font-family: $fontFamilyMain;
+    font-size: 4vw;
+    font-weight: bolder;
+}
+
+.homepageParagraphStyling{
+    font-family: $fontFamilyMain;
+    padding-top: 3vh !important;
+    padding-left: 10vw !important;
+    padding-right: 10vw !important;
+    padding-bottom: 5vh !important;
+    text-align: center;
+    font-weight: 600;
+}
+
+.homepageContactUsButton{
+    font-family: $fontFamilyMain;
+    font-weight: bold;
+    font-size: x-large;
+    color: white;
+    border-radius: 8px;
+    width: 15vw;
+    height: 8vh;
+    background-color: rgb(241, 199, 68);
+}
