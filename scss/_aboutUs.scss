@@ -12,7 +12,7 @@
     position: relative;
     padding-left: 5vw !important;
     padding-right: 5vw !important;
-    padding-top: 25vh !important;
+    padding-top: $defaultTopSpacing;
     height: 70%;
     width: 100%;
     display: grid;
@@ -20,18 +20,22 @@
     grid-template-rows: 1fr;
     column-gap: 2vw;
     row-gap: 0px;
+
 }
 
+// Styles images tiles
 .aboutUsImageSection{
     background-color: black;
 }
 
+// Styles text tile
 .aboutUsTextSection{
     background-color: white;
     font-family: $fontFamilyMain;
 
 }
 
+// Yellow line division in between title and text
 .aboutUsYellowLine{
     background-color: $yellowColor;
     width: 30%;
@@ -40,6 +44,7 @@
     margin-bottom: 3.5vh !important;
 }
 
+// Styles big 30 text
 .aboutUs30{
     color: $yellowColor;
     font-size: 30vh;
@@ -47,6 +52,7 @@
     z-index: 100;
 }
 
+// Styles YEARS WORKING EXPERIENCE grid
 .aboutUsWorkingExperienceGrid{
     display: grid;
     position: absolute;
@@ -63,20 +69,23 @@
 
 }
 
+// Styles bottom line behind 30 YEARS EXPERIENCE
 .aboutUsBottomLine{
     position: absolute;
     bottom: 0;
     background-color: $blackColor;
-    width: 42.5% !important;
+    width: 45% !important;
     height: 8%;
 }
 
+// Styles Years Working Experience text
 .aboutUsYearsWorkingExperience{
-    font-size: 4.5vh;
+    font-size: 2.6vw;
     justify-self: flex-start;
     font-weight: 200;
 }
 
+// Styles paragraph section
 .aboutUsParagraph{
     font-size: x-large;
     font-weight: 200;
