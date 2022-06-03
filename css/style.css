@@ -370,6 +370,14 @@
   padding-right: 5% !important;
 }
 
+.servicesTextMiddleContainerFadeOut {
+  padding-top: 5% !important;
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+  -webkit-animation: fadeOut ease 2s 1;
+          animation: fadeOut ease 2s 1;
+}
+
 .servicesYellowLine {
   position: relative;
   background-color: #f1c744;
@@ -378,33 +386,48 @@
   margin-top: 3.5vh !important;
   margin-bottom: 4.5vh !important;
   margin-left: 3% !important;
-  z-index: 1;
 }
 
-.servicesBlackLine {
-  position: absolute;
-  height: 1vh;
-  width: 97%;
-  background-color: #323031;
+.shrinkYellowLine {
+  position: relative;
+  background-color: #f1c744;
+  width: 2%;
+  height: 0.5vh !important;
+  margin-top: 3.5vh !important;
+  margin-bottom: 4.5vh !important;
+  margin-left: 3% !important;
   -webkit-animation: yellowLineShrink ease 1s 1;
           animation: yellowLineShrink ease 1s 1;
+  left: 20%;
 }
 
 @-webkit-keyframes yellowLineShrink {
   0% {
-    width: 0%;
+    width: 25%;
+    left: 0%;
+  }
+  50% {
+    width: 25%;
+    left: 0%;
   }
   100% {
-    width: 97%;
+    width: 2%;
+    left: 20%;
   }
 }
 
 @keyframes yellowLineShrink {
   0% {
-    width: 0%;
+    width: 25%;
+    left: 0%;
+  }
+  50% {
+    width: 25%;
+    left: 0%;
   }
   100% {
-    width: 97%;
+    width: 2%;
+    left: 20%;
   }
 }
 
@@ -470,6 +493,15 @@
           flex-direction: column;
 }
 
+.servicesMiddleDivMovementSideways {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
 .servicesGridButtons {
   display: -ms-grid;
   display: grid;
@@ -490,6 +522,10 @@
   -ms-flex-line-pack: center;
       align-content: center;
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
 
 .servicesGridButtonsExpanded {
@@ -694,6 +730,74 @@
   100% {
     opacity: 100%;
   }
+}
+
+.commercialPaintingBody {
+  font-family: "Outfit", sans-serif;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.commercialPaintingParagraph {
+  font-weight: 200;
+  padding-top: 10% !important;
+  font-size: 3vh;
+  -webkit-animation: fadeIn ease 2s 1;
+          animation: fadeIn ease 2s 1;
+}
+
+.goBackButtonDiv {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding-top: 10% !important;
+  cursor: pointer;
+  -webkit-animation: fadeIn ease 2s 1;
+          animation: fadeIn ease 2s 1;
+}
+
+.arrowsDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.goBackParagraph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.goBackText {
+  color: white;
+  font-size: 2vh;
+  margin-left: -40% !important;
+}
+
+.yellowArrows {
+  color: #f1c744;
+  margin-right: -35% !important;
 }
 
 * {

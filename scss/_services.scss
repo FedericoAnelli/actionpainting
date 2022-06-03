@@ -42,6 +42,12 @@ $defaultPaddingSides: 5% !important;
     padding-right: $defaultPaddingSides;
 }
 
+.servicesTextMiddleContainerFadeOut{
+    padding-top: 5% !important;
+    padding-left: $defaultPaddingSides;
+    padding-right: $defaultPaddingSides;
+    animation: fadeOut ease 2s 1;
+}
 
 
 
@@ -54,29 +60,35 @@ $defaultPaddingSides: 5% !important;
     margin-top: 3.5vh !important;
     margin-bottom: 4.5vh !important;
     margin-left: 3% !important;
-    z-index: 1;
 }
 
 
-
-.servicesBlackLine{
-    position: absolute;
-    height: 1vh;
-    width: 97%;
-
-    background-color: $blackColor;
+.shrinkYellowLine{
+    position: relative;
+    background-color: $yellowColor;
+    width: 2%;
+    height: 0.5vh !important;
+    margin-top: 3.5vh !important;
+    margin-bottom: 4.5vh !important;
+    margin-left: 3% !important;
     animation: yellowLineShrink ease 1s 1;
+    left: 20%;
 }
 
 
 @keyframes yellowLineShrink {
     0%{
-
-        width: 0%;
+        width: 25%;
+        left: 0%;
+    }
+    50%{
+        width: 25%;
+        left: 0%;
     }
     100%{
 
-        width: 97%;
+        width: 2%;
+        left: 20%;
     }
 }
 
@@ -117,6 +129,12 @@ $defaultPaddingSides: 5% !important;
     flex-direction: column;
 }
 
+.servicesMiddleDivMovementSideways{
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
 
 
 
@@ -136,6 +154,10 @@ $defaultPaddingSides: 5% !important;
     justify-content: center;
     align-content: center;
     cursor: pointer;
+}
+
+.hidden{
+    display: none;
 }
 
 .servicesGridButtonsExpanded{
@@ -267,4 +289,57 @@ $defaultPaddingSides: 5% !important;
     100%{
         opacity: 100%;
     }
+}
+
+// Commercial Painting Paragraph
+.commercialPaintingBody{
+    font-family: $fontFamilyMain;
+    color: white;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.commercialPaintingParagraph{
+    font-weight: 200;
+    padding-top: 10% !important;
+    font-size: 3vh;
+    animation: fadeIn ease 2s 1;
+}
+
+//Go back button
+.goBackButtonDiv{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding-top: 10% !important;
+    cursor: pointer;
+    animation: fadeIn ease 2s 1;
+}
+
+.arrowsDiv{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.goBackParagraph{
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+}
+
+.goBackText{
+    color: white;
+    font-size: 2vh;
+    margin-left: -40% !important ;
+}
+
+.yellowArrows{
+    color: $yellowColor;
+    margin-right: -35% !important;
 }

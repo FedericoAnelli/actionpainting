@@ -6,14 +6,26 @@ let commercialPaintingText = document.getElementById("commercialPaintingText");
 let servicesYellowLine = document.getElementById("servicesYellowLine");
 let servicesHeading = document.getElementById("servicesHeading");
 let servicesTextMiddleContainer = document.getElementById("servicesTextMiddleContainer");
+let servicesMiddleDivMovementSideways = document.getElementById("servicesMiddleDivMovementSideways");
+let servicesTextTile = document.getElementById("servicesTextTile");
+
 commercialPainting.addEventListener("click", ()=>{
 
 
     // Moves yellow line to the right
-    let movementRight = document.createElement("div");
-    movementRight.id = "movementRight";
-    movementRight.className = "servicesBlackLine";
-    servicesYellowLine.prepend(movementRight);
+    let servicesYellowLine = document.getElementById("servicesYellowLine");
+    servicesYellowLine.remove();
+    let shrinkYellowLine = document.createElement("p");
+    shrinkYellowLine.id = "shrinkYellowLine";
+    shrinkYellowLine.className = "shrinkYellowLine";
+    shrinkYellowLine.innerHTML = `&nbsp`;
+    servicesMiddleDivMovementSideways.appendChild(shrinkYellowLine);
+    shrinkYellowLine.addEventListener("animationend", ()=>{
+        servicesMiddleDivMovementSideways.remove();
+    }
+    
+    
+    )
 
     // Concrete Restoration Fade Out
     let concreteRestorationFadeOut = document.createElement("div");
@@ -60,7 +72,7 @@ commercialPainting.addEventListener("click", ()=>{
 
 
     // Animation after movement to the right starts
-    movementRight.addEventListener("animationend", () => {
+    shrinkYellowLine.addEventListener("animationend", () => {
     
         servicesFadeOut.remove();
 
@@ -105,6 +117,49 @@ commercialPainting.addEventListener("click", ()=>{
             commercialPaintingHeader.innerHTML = `Commercial <br> Painting`;
             servicesGridButtonsExpanded.appendChild(commercialPaintingHeader);
 
+            // Text fade in, Commercial Painting
+            let commercialPaintingBody = document.createElement("div");
+            commercialPaintingBody.id = "commercialPaintingBody";
+            commercialPaintingBody.className = "commercialPaintingBody";
+            commercialPaintingBody.innerHTML = `<p class="commercialPaintingParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, repudiandae. Doloribus officia tempore vel, cumque sunt aperiam repellat ex reprehenderit, ipsum ipsa, autem quibusdam amet architecto ab accusantium explicabo! Aut.</p>`
+            servicesTextMiddleContainer.appendChild(commercialPaintingBody);
+
+            // Go back button fade in
+            let goBackButton = document.createElement("div");
+            goBackButton.id = "goBackButtonDiv";
+            goBackButton.className = "goBackButtonDiv";
+            goBackButton.innerHTML= `
+            
+            <div class = "arrowsDiv">
+            <span class="material-symbols-outlined yellowArrows">
+            arrow_back_ios
+            </span><span class="material-symbols-outlined yellowArrows">
+            arrow_back_ios
+            </span></div>
+            
+            <div class="goBackParagraph"><p class="goBackText">GO BACK</p></div>
+            
+            `;
+            
+            servicesTextMiddleContainer.appendChild(goBackButton);
+
+                    goBackButton.addEventListener("click", ()=>
+                    
+                    {
+                        servicesTextMiddleContainer.remove();                        
+                        servicesTextTile.appendChild(servicesTextMiddleContainer);
+                        servicesTextMiddleContainer.appendChild(servicesHeading);
+                        servicesTextMiddleContainer.appendChild(servicesMiddleDivMovementSideways);
+                        servicesMiddleDivMovementSideways.appendChild(servicesYellowLine);
+                        servicesTextMiddleContainer.appendChild(servicesGridButtons);
+                        servicesGridButtons.appendChild(commercialPainting);
+                        servicesGridButtons.appendChild(concreteRestoration);
+                        servicesGridButtons.appendChild(residentialPainting);
+                    }
+
+
+                        
+                    )
 
         }
         )
