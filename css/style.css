@@ -339,7 +339,7 @@
 
 .servicesMainGrid {
   padding-top: 25vh !important;
-  height: 65%;
+  height: 70%;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -408,6 +408,68 @@
   }
 }
 
+.servicesYellowLineExpandVertical {
+  position: absolute;
+  background-color: #f1c744;
+  width: 3%;
+  height: 100%;
+  bottom: 0;
+  -webkit-animation: yellowLineExpandVertical ease 2s 1;
+          animation: yellowLineExpandVertical ease 2s 1;
+  z-index: 1;
+}
+
+@-webkit-keyframes yellowLineExpandVertical {
+  0% {
+    bottom: -80%;
+    height: 0;
+  }
+  50% {
+    bottom: -80%;
+    height: 180%;
+  }
+  100% {
+    bottom: 0;
+    height: 100%;
+  }
+}
+
+@keyframes yellowLineExpandVertical {
+  0% {
+    bottom: -80%;
+    height: 0;
+  }
+  50% {
+    bottom: -80%;
+    height: 180%;
+  }
+  100% {
+    bottom: 0;
+    height: 100%;
+  }
+}
+
+.servicesMiddleDivMovementUpwards {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .servicesGridButtons {
   display: -ms-grid;
   display: grid;
@@ -428,6 +490,27 @@
   -ms-flex-line-pack: center;
       align-content: center;
   cursor: pointer;
+}
+
+.servicesGridButtonsExpanded {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2] 4fr;
+      grid-template-columns: repeat(2, 1fr) 4fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -webkit-column-gap: 0;
+          column-gap: 0;
+  row-gap: 0;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .servicesButton {
@@ -451,6 +534,29 @@
       align-content: center;
 }
 
+.servicesButtonFadeOut {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  -webkit-column-gap: 0;
+          column-gap: 0;
+  row-gap: 0;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-animation: fadeOut ease 2s 1;
+          animation: fadeOut ease 2s 1;
+}
+
 .yellowCircleButton {
   background-color: #f1c744;
   border-radius: 50%;
@@ -464,12 +570,66 @@
   cursor: pointer;
 }
 
+.yellowCircleButtonHeading {
+  background-color: #f1c744;
+  border-radius: 50%;
+  height: 15vh;
+  width: 15vh;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-animation: travelUpwards ease 2s 1;
+          animation: travelUpwards ease 2s 1;
+}
+
+@-webkit-keyframes travelUpwards {
+  0% {
+    -webkit-transform: translate(55%, 210%);
+            transform: translate(55%, 210%);
+  }
+  25% {
+    -webkit-transform: translate(-2%, 210%);
+            transform: translate(-2%, 210%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes travelUpwards {
+  0% {
+    -webkit-transform: translate(55%, 210%);
+            transform: translate(55%, 210%);
+  }
+  25% {
+    -webkit-transform: translate(-2%, 210%);
+            transform: translate(-2%, 210%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
 .paragraphButtons {
   color: white;
   font-size: x-large;
   padding-left: 5% !important;
   padding-right: 5% !important;
   text-align: center;
+}
+
+.paragraphButtonsFadeOut {
+  color: white;
+  font-size: x-large;
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+  text-align: center;
+  -webkit-animation: fadeOut ease 2s 1;
+          animation: fadeOut ease 2s 1;
 }
 
 .servicesHeading {
@@ -484,11 +644,11 @@
   font-size: 6vh;
   font-weight: 800;
   padding-left: 3% !important;
-  -webkit-animation: fedeOut ease 2s 1;
-          animation: fedeOut ease 2s 1;
+  -webkit-animation: fadeOut ease 2s 1;
+          animation: fadeOut ease 2s 1;
 }
 
-@-webkit-keyframes fedeOut {
+@-webkit-keyframes fadeOut {
   0% {
     opacity: 100%;
   }
@@ -497,12 +657,42 @@
   }
 }
 
-@keyframes fedeOut {
+@keyframes fadeOut {
   0% {
     opacity: 100%;
   }
   100% {
     opacity: 0;
+  }
+}
+
+.servicesAppearingHeaderStyle {
+  color: white;
+  font-size: 6vh;
+  font-weight: 800;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  justify-self: baseline;
+  padding-left: 3% !important;
+  -webkit-animation: fadeIn ease 2s 1;
+          animation: fadeIn ease 2s 1;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
   }
 }
 
