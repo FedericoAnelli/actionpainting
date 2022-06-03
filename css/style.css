@@ -43,6 +43,19 @@
   font-size: medium;
   font-weight: 500;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .menuGrid {
@@ -67,7 +80,7 @@
   padding-right: 5vw !important;
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: white;
 }
 
 .menuItemsStyling {
@@ -145,6 +158,12 @@
   100% {
     width: 0%;
   }
+}
+
+.material-symbols-outlined {
+  color: white;
+  padding-right: 0.5vh !important;
+  font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 200, 'opsz' 48;
 }
 
 .homepageContainer {
@@ -269,7 +288,7 @@
   display: -ms-grid;
   display: grid;
   position: absolute;
-  bottom: 2.5vh;
+  bottom: -3%;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
   -ms-grid-rows: 1fr;
@@ -286,21 +305,23 @@
   -ms-flex-line-pack: center;
       align-content: center;
   justify-items: center;
-  line-height: .9;
+  width: 43%;
 }
 
 .aboutUsBottomLine {
   position: absolute;
   bottom: 0;
   background-color: #323031;
-  width: 45% !important;
+  width: 43% !important;
   height: 8%;
 }
 
 .aboutUsYearsWorkingExperience {
-  font-size: 2.6vw;
+  max-width: 22.62vw;
+  font-size: 2.45vw;
   justify-self: flex-start;
   font-weight: 200;
+  overflow: hidden;
 }
 
 .aboutUsParagraph {
@@ -350,12 +371,41 @@
 }
 
 .servicesYellowLine {
+  position: relative;
   background-color: #f1c744;
   width: 25%;
   height: 0.5vh !important;
   margin-top: 3.5vh !important;
   margin-bottom: 4.5vh !important;
   margin-left: 3% !important;
+  z-index: 1;
+}
+
+.servicesBlackLine {
+  position: absolute;
+  height: 1vh;
+  width: 97%;
+  background-color: #323031;
+  -webkit-animation: yellowLineShrink ease 1s 1;
+          animation: yellowLineShrink ease 1s 1;
+}
+
+@-webkit-keyframes yellowLineShrink {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 97%;
+  }
+}
+
+@keyframes yellowLineShrink {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 97%;
+  }
 }
 
 .servicesGridButtons {
@@ -377,6 +427,7 @@
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  cursor: pointer;
 }
 
 .servicesButton {
@@ -410,6 +461,7 @@
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
+  cursor: pointer;
 }
 
 .paragraphButtons {
@@ -425,6 +477,33 @@
   font-size: 6vh;
   font-weight: 800;
   padding-left: 3% !important;
+}
+
+.servicesHeadingFadeOut {
+  color: white;
+  font-size: 6vh;
+  font-weight: 800;
+  padding-left: 3% !important;
+  -webkit-animation: fedeOut ease 2s 1;
+          animation: fedeOut ease 2s 1;
+}
+
+@-webkit-keyframes fedeOut {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fedeOut {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 * {

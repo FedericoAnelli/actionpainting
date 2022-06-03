@@ -47,14 +47,36 @@ $defaultPaddingSides: 5% !important;
 
 // Yellow line division in between title and text
 .servicesYellowLine{
+    position: relative;
     background-color: $yellowColor;
     width: 25%;
     height: 0.5vh !important;
     margin-top: 3.5vh !important;
     margin-bottom: 4.5vh !important;
     margin-left: 3% !important;
+    z-index: 1;
 }
 
+.servicesBlackLine{
+    position: absolute;
+    height: 1vh;
+    width: 97%;
+
+    background-color: $blackColor;
+    animation: yellowLineShrink ease 1s 1;
+}
+
+
+@keyframes yellowLineShrink {
+    0%{
+
+        width: 0%;
+    }
+    100%{
+
+        width: 97%;
+    }
+}
 
 
 
@@ -70,7 +92,7 @@ $defaultPaddingSides: 5% !important;
     align-items: center;
     justify-content: center;
     align-content: center;
-
+    cursor: pointer;
 }
 
 .servicesButton{
@@ -83,6 +105,7 @@ $defaultPaddingSides: 5% !important;
     align-items: center;
     justify-content: center;
     align-content: center;
+    
 }
 
 .yellowCircleButton{
@@ -93,6 +116,7 @@ $defaultPaddingSides: 5% !important;
     width: 15vh;
     align-self: center;
     justify-self: center;
+    cursor: pointer;
 }
 
 .paragraphButtons{
@@ -111,4 +135,15 @@ $defaultPaddingSides: 5% !important;
     padding-left: 3% !important;
 }
 
+.servicesHeadingFadeOut{
+    color: white;
+    font-size: 6vh;
+    font-weight: 800;
+    padding-left: 3% !important;
+    animation: fedeOut ease 2s 1;
+}
 
+@keyframes fedeOut{
+    0%{opacity: 100%;}
+    100%{opacity: 0;}
+}

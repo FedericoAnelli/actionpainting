@@ -34,6 +34,11 @@
     font-size: $fontSizeContact;
     font-weight: $fontWeightMenu;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
 }
 
 
@@ -50,7 +55,7 @@
     align-content: center;
     padding-right: 5vw !important;
     backdrop-filter: blur(6px);
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 // Text decoration for menu items
@@ -97,4 +102,15 @@
     0%{width: 100%;}
     100%{width: 0%}
     
+}
+
+
+.material-symbols-outlined {
+  color: white;
+  padding-right: 0.5vh !important;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 200,
+  'opsz' 48
 }

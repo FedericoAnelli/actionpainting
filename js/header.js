@@ -36,6 +36,5 @@ let menuList = document.getElementById("navbar").getElementsByTagName("li");
 
 for (let i = 0; i < menuList.length-1; i++)
 {
-    console.log(menuList[i+1].id);
     yellowStrikethroughIn(menuList[i+1].id);
 }
