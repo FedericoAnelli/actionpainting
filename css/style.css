@@ -391,8 +391,8 @@
       align-self: flex-start;
   width: 0.3vw;
   height: 100%;
-  -webkit-transition: width 1s, font-size 1s, top 0.5s;
-  transition: width 1s, font-size 1s, top 0.5s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 .servicesGridButtons {
@@ -503,6 +503,8 @@
       align-self: baseline;
   justify-self: baseline;
   padding-left: 3% !important;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 .commercialPaintingBody {
@@ -520,6 +522,8 @@
   color: white;
   padding-top: 10% !important;
   font-size: 3vh;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 .goBackButtonDiv {
