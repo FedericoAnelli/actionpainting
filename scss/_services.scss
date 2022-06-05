@@ -67,7 +67,7 @@ $defaultPaddingSides: 5% !important;
 .servicesYellowLineVertical{
     background-color: $yellowColor;
     align-self: flex-start;
-    width: 0.2vw;
+    width: 0.3vw;
     height: 100%;
     transition: width 1s, font-size 1s, top 0.5s;
 }
@@ -117,7 +117,7 @@ $defaultPaddingSides: 5% !important;
     align-items: center;
     justify-content: center;
     align-content: center;
-    transition: opacity 1s;
+    transition: opacity 0.5s;
 }
 
 
@@ -141,7 +141,7 @@ $defaultPaddingSides: 5% !important;
     padding-right: 5% !important;
     padding-top: 10% !important;
     text-align: center;
-    transform: opacity 1s;
+    transform: opacity 0.5s;
 }
 
 
@@ -151,7 +151,7 @@ $defaultPaddingSides: 5% !important;
     font-size: 6vh;
     font-weight: 800;
     padding-left: 3% !important;
-    transition: opacity 1s;
+    transition: opacity 0.5s;
 }
 
 
@@ -181,19 +181,17 @@ $defaultPaddingSides: 5% !important;
     color: white;
     padding-top: 10% !important;
     font-size: 3vh;
-    animation: fadeIn ease 2s 1;
 }
 
 //Go back button
 .goBackButtonDiv{
     height: 100%;
-    width: 100%;
+    width: 35%;
     display: flex;
     align-items: center;
     align-content: center;
     padding-top: 10% !important;
     cursor: pointer;
-    animation: fadeIn ease 2s 1;
 }
 
 .arrowsDiv{
@@ -219,4 +217,10 @@ $defaultPaddingSides: 5% !important;
 .yellowArrows{
     color: $yellowColor;
     margin-right: -35% !important;
+}
+
+
+
+.residentialTransition{
+    transition: width 1s;
 }

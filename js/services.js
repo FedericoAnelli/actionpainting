@@ -21,26 +21,7 @@ arrow_back_ios
 </span></div><div class = "goBackParagraph"><p class="goBackText">GO BACK</p></div>
 
 `;
-
-
-        //Creates elements for Commercial Painting Screen
-        let servicesYellowLineVertical = document.createElement("p");
-        servicesYellowLineVertical.className = "servicesYellowLineVertical";
-        servicesYellowLineVertical.id = "servicesYellowLineVertical";
-        servicesYellowLineVertical.innerHTML = `&nbsp`;
-
-        let headingCommercialPainting = document.createElement("p");
-        headingCommercialPainting.className = "servicesAppearingHeaderStyle";
-        headingCommercialPainting.id = "headingCommercialPainting";
-        headingCommercialPainting.innerHTML = `Commercial <br> Painting`;
-
-        let commercialPaintingBody = document.createElement("p");
-        commercialPaintingBody.className = "commercialPaintingParagraph";
-        commercialPaintingBody.id = "commercialPaintingBody";
-        commercialPaintingBody.innerHTML = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, repudiandae. Doloribus officia tempore vel, cumque sunt aperiam repellat ex reprehenderit, ipsum ipsa, autem quibusdam amet architecto ab accusantium explicabo! Aut.`;
-
-
-
+displayNone(goBackButton);
 
 
 // Heading
@@ -48,10 +29,51 @@ let servicesHeading = document.getElementById("servicesHeading");
 
 // Paragraph texts
 let commercialPaintingText = document.getElementById("commercialPaintingText");
+let concreteRestorationText = document.getElementById("concreteRestorationText");
+let residentialPaintingText = document.getElementById("residentialPaintingText");
 
 // Yellow line
 let servicesYellowLineHorizontal = document.getElementById("servicesYellowLine");
 let servicesYellowLineContainer = document.getElementById("servicesYellowLineContainer");
+
+
+
+// Dynamic elements and functions
+let servicesYellowLineVertical = document.createElement("p");
+servicesYellowLineVertical.className = "servicesYellowLineVertical";
+servicesYellowLineVertical.id = "servicesYellowLineVertical";
+servicesYellowLineVertical.innerHTML = `&nbsp`;
+displayNone(servicesYellowLineVertical);
+
+let yellowButtonIcon = document.createElement("button");
+yellowButtonIcon.className = "yellowCircleButton";
+displayNone(yellowButtonIcon);
+
+let headingServicesMenu = document.createElement("p");
+headingServicesMenu.className = "servicesAppearingHeaderStyle";
+displayNone(headingServicesMenu);
+
+let bodyText = document.createElement("p");
+bodyText.className = "commercialPaintingParagraph";
+displayNone(bodyText);
+
+servicesGridButtons.appendChild(yellowButtonIcon);
+servicesGridButtons.appendChild(servicesYellowLineVertical);
+servicesGridButtons.appendChild(headingServicesMenu);
+servicesTextMiddleContainer.appendChild(bodyText);
+servicesTextMiddleContainer.appendChild(goBackButton);
+
+
+function createServicesDisplay(button, heading, heading2, body){
+    headingServicesMenu.id = heading+heading+heading2;
+    headingServicesMenu.innerHTML = heading +"<br>"+ heading2;
+    bodyText.id = heading+heading2+"Body";
+    bodyText.innerHTML = `${body}`;
+}
+
+
+
+
 
 // Fade Out Function
 function fadeOut(object){object.style.opacity = 0};
@@ -68,7 +90,6 @@ function fadeOutAllButMe (object){
         fadeOut(servicesHeading);
         fadeOut(commercialPaintingButton);
         fadeOut(residentialPaintingButton);
-        //fadeOut(commercialPaintingText);
         fadeOut(servicesYellowLineContainer);
     }
 
@@ -76,8 +97,7 @@ function fadeOutAllButMe (object){
     {
         fadeOut(servicesHeading);
         fadeOut(concreteRestorationButton);
-        fadeOut(residentialPaintingButton);
-        //fadeOut(commercialPaintingText);
+        fadeOut(commercialPaintingButton);
         fadeOut(servicesYellowLineContainer);
     }
     if (object == commercialPaintingButton)
@@ -85,7 +105,6 @@ function fadeOutAllButMe (object){
         fadeOut(servicesHeading);
         fadeOut(concreteRestorationButton);
         fadeOut(residentialPaintingButton);
-        fadeOut(commercialPaintingText);
         fadeOut(servicesYellowLineContainer);
     }
 
@@ -104,23 +123,83 @@ commercialPaintingButton.onclick = ()=> {
 
         displayNone(servicesYellowLineContainer);
         displayNone(servicesHeading);
+        displayNone(commercialPaintingButton);
         displayNone(concreteRestorationButton);
         displayNone(residentialPaintingButton);
-        displayNone(commercialPaintingText);
         
         servicesGridButtons.className = "servicesGridButtonsExpanded";
-        commercialPaintingButton.className = "servicesButtonSelected";
 
+        createServicesDisplay(commercialPaintingButton, "Commercial", "Painting", "lorem ipsum");
 
-
-        servicesGridButtons.appendChild(servicesYellowLineVertical);
-        servicesGridButtons.appendChild(headingCommercialPainting);
-        servicesTextMiddleContainer.appendChild(commercialPaintingBody);
-        servicesTextMiddleContainer.appendChild(goBackButton);
+        returnDisplay(servicesYellowLineVertical);
+        returnDisplay(yellowButtonIcon);
+        returnDisplay(headingServicesMenu);
+        returnDisplay(bodyText);
+        returnDisplay(goBackButton);
     });
 
 
 };
+
+concreteRestorationButton.onclick = ()=> {
+
+    fadeOutAllButMe(concreteRestorationButton);
+
+    
+
+    servicesHeading.addEventListener("transitionend", ()=>{
+
+        displayNone(servicesYellowLineContainer);
+        displayNone(servicesHeading);
+        displayNone(commercialPaintingButton);
+        displayNone(concreteRestorationButton);
+        displayNone(residentialPaintingButton);
+
+        
+        servicesGridButtons.className = "servicesGridButtonsExpanded";
+
+        createServicesDisplay(concreteRestorationButton, "Concrete", "Restoration", "lorem ipsum");
+
+        returnDisplay(servicesYellowLineVertical);
+        returnDisplay(yellowButtonIcon);
+        returnDisplay(headingServicesMenu);
+        returnDisplay(bodyText);
+        returnDisplay(goBackButton);
+    });
+
+
+};
+
+residentialPaintingButton.onclick = ()=> {
+
+    fadeOutAllButMe(residentialPaintingButton);
+
+    
+
+    servicesHeading.addEventListener("transitionend", ()=>{
+
+        displayNone(servicesYellowLineContainer);
+        displayNone(servicesHeading);
+        displayNone(residentialPaintingButton);
+        displayNone(concreteRestorationButton);
+        displayNone(commercialPainting);
+        
+        servicesGridButtons.className = "servicesGridButtonsExpanded";
+
+        createServicesDisplay(residentialPaintingButton, "Residential", "Painting", "lorem ipsum");
+
+        returnDisplay(servicesYellowLineVertical);
+        returnDisplay(yellowButtonIcon);
+        returnDisplay(headingServicesMenu);
+        returnDisplay(bodyText);
+        returnDisplay(goBackButton);
+    });
+
+
+};
+
+
+
 
 goBackButton.addEventListener("click", ()=>{
 
@@ -128,11 +207,12 @@ returnDisplay(servicesYellowLineContainer);
 returnDisplay(servicesHeading);
 returnDisplay(concreteRestorationButton);
 returnDisplay(residentialPaintingButton);
-returnDisplay(commercialPaintingText);
+returnDisplay(commercialPaintingButton);
 
 displayNone(servicesYellowLineVertical);
-displayNone(headingCommercialPainting);
-displayNone(commercialPaintingBody);
+displayNone(yellowButtonIcon);
+displayNone(headingServicesMenu);
+displayNone(bodyText);
 displayNone(goBackButton);
 
 

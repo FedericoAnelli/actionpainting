@@ -389,7 +389,7 @@
   background-color: #f1c744;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  width: 0.2vw;
+  width: 0.3vw;
   height: 100%;
   -webkit-transition: width 1s, font-size 1s, top 0.5s;
   transition: width 1s, font-size 1s, top 0.5s;
@@ -458,8 +458,8 @@
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 .yellowCircleButton {
@@ -482,8 +482,8 @@
   padding-right: 5% !important;
   padding-top: 10% !important;
   text-align: center;
-  -webkit-transform: opacity 1s;
-          transform: opacity 1s;
+  -webkit-transform: opacity 0.5s;
+          transform: opacity 0.5s;
 }
 
 .servicesHeading {
@@ -491,8 +491,8 @@
   font-size: 6vh;
   font-weight: 800;
   padding-left: 3% !important;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 .servicesAppearingHeaderStyle {
@@ -520,13 +520,11 @@
   color: white;
   padding-top: 10% !important;
   font-size: 3vh;
-  -webkit-animation: fadeIn ease 2s 1;
-          animation: fadeIn ease 2s 1;
 }
 
 .goBackButtonDiv {
   height: 100%;
-  width: 100%;
+  width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -537,8 +535,6 @@
       align-content: center;
   padding-top: 10% !important;
   cursor: pointer;
-  -webkit-animation: fadeIn ease 2s 1;
-          animation: fadeIn ease 2s 1;
 }
 
 .arrowsDiv {
@@ -572,6 +568,11 @@
 .yellowArrows {
   color: #f1c744;
   margin-right: -35% !important;
+}
+
+.residentialTransition {
+  -webkit-transition: width 1s;
+  transition: width 1s;
 }
 
 * {
