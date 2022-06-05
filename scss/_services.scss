@@ -107,19 +107,7 @@ $defaultPaddingSides: 5% !important;
 }
 
 .servicesButton{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 0;
-    row-gap: 0;
-    justify-items: center;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    transition: opacity 1s;
-}
-
-.servicesButtonSelected{
+    padding-top: 15%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -151,6 +139,7 @@ $defaultPaddingSides: 5% !important;
     font-size: x-large;
     padding-left: 5% !important;
     padding-right: 5% !important;
+    padding-top: 10% !important;
     text-align: center;
     transform: opacity 1s;
 }

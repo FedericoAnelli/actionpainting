@@ -1,5 +1,6 @@
 // Boxes
 let servicesTextMiddleContainer = document.getElementById("servicesTextMiddleContainer");
+let servicesTextTile = document.getElementById("servicesTextTile");
 
 // Buttons
 let commercialPaintingButton = document.getElementById("commercialPainting");
@@ -22,27 +23,6 @@ arrow_back_ios
 `;
 
 
-
-
-// Heading
-let servicesHeading = document.getElementById("servicesHeading");
-
-// Paragraph texts
-let commercialPaintingText = document.getElementById("commercialPaintingText");
-
-// Yellow line
-let servicesYellowLineHorizontal = document.getElementById("servicesYellowLine");
-let servicesYellowLineContainer = document.getElementById("servicesYellowLineContainer");
-
-// Fade Out Function
-function fadeOut(object){object.style.opacity = 0};
-function displayNone(object){object.style.display = "none"};
-
-// Creates text area 
-/* function createTextArea(){
-        servicesGridButtons.className = "servicesGridButtonsExpanded";
-        commercialPaintingButton.className = "servicesButtonSelected";
-
         //Creates elements for Commercial Painting Screen
         let servicesYellowLineVertical = document.createElement("p");
         servicesYellowLineVertical.className = "servicesYellowLineVertical";
@@ -60,11 +40,25 @@ function displayNone(object){object.style.display = "none"};
         commercialPaintingBody.innerHTML = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, repudiandae. Doloribus officia tempore vel, cumque sunt aperiam repellat ex reprehenderit, ipsum ipsa, autem quibusdam amet architecto ab accusantium explicabo! Aut.`;
 
 
-        servicesGridButtons.appendChild(servicesYellowLineVertical);
-        servicesGridButtons.appendChild(headingCommercialPainting);
-        servicesTextMiddleContainer.appendChild(commercialPaintingBody);
-        servicesTextMiddleContainer.appendChild(goBackButton);
-}*/
+
+
+
+// Heading
+let servicesHeading = document.getElementById("servicesHeading");
+
+// Paragraph texts
+let commercialPaintingText = document.getElementById("commercialPaintingText");
+
+// Yellow line
+let servicesYellowLineHorizontal = document.getElementById("servicesYellowLine");
+let servicesYellowLineContainer = document.getElementById("servicesYellowLineContainer");
+
+// Fade Out Function
+function fadeOut(object){object.style.opacity = 0};
+function displayNone(object){object.style.display = "none"};
+function returnDisplay (object){object.style.removeProperty('display'); object.style.opacity = "100%"};
+
+
 
 
 function fadeOutAllButMe (object){
@@ -117,21 +111,6 @@ commercialPaintingButton.onclick = ()=> {
         servicesGridButtons.className = "servicesGridButtonsExpanded";
         commercialPaintingButton.className = "servicesButtonSelected";
 
-        //Creates elements for Commercial Painting Screen
-        let servicesYellowLineVertical = document.createElement("p");
-        servicesYellowLineVertical.className = "servicesYellowLineVertical";
-        servicesYellowLineVertical.id = "servicesYellowLineVertical";
-        servicesYellowLineVertical.innerHTML = `&nbsp`;
-
-        let headingCommercialPainting = document.createElement("p");
-        headingCommercialPainting.className = "servicesAppearingHeaderStyle";
-        headingCommercialPainting.id = "headingCommercialPainting";
-        headingCommercialPainting.innerHTML = `Commercial <br> Painting`;
-
-        let commercialPaintingBody = document.createElement("p");
-        commercialPaintingBody.className = "commercialPaintingParagraph";
-        commercialPaintingBody.id = "commercialPaintingBody";
-        commercialPaintingBody.innerHTML = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, repudiandae. Doloribus officia tempore vel, cumque sunt aperiam repellat ex reprehenderit, ipsum ipsa, autem quibusdam amet architecto ab accusantium explicabo! Aut.`;
 
 
         servicesGridButtons.appendChild(servicesYellowLineVertical);
@@ -143,3 +122,21 @@ commercialPaintingButton.onclick = ()=> {
 
 };
 
+goBackButton.addEventListener("click", ()=>{
+
+returnDisplay(servicesYellowLineContainer);
+returnDisplay(servicesHeading);
+returnDisplay(concreteRestorationButton);
+returnDisplay(residentialPaintingButton);
+returnDisplay(commercialPaintingText);
+
+displayNone(servicesYellowLineVertical);
+displayNone(headingCommercialPainting);
+displayNone(commercialPaintingBody);
+displayNone(goBackButton);
+
+
+servicesGridButtons.className = "servicesGridButtons";
+
+
+})
