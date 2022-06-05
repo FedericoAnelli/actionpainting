@@ -571,8 +571,10 @@
 }
 
 .residentialTransition {
-  -webkit-transition: width 1s;
-  transition: width 1s;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 * {

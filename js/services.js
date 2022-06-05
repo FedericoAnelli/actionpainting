@@ -8,6 +8,7 @@ let concreteRestorationButton = document.getElementById("concreteRestoration");
 let residentialPaintingButton = document.getElementById("residentialPainting");
 let servicesGridButtons = document.getElementById("servicesGridButtons");
 let yellowCircleButton = document.getElementById("yellowCircleButton");
+let residentialBall = document.getElementById("residentialBall");
 
 let goBackButton = document.createElement("div");
 goBackButton.id = "goBackButton";
@@ -47,6 +48,7 @@ displayNone(servicesYellowLineVertical);
 
 let yellowButtonIcon = document.createElement("button");
 yellowButtonIcon.className = "yellowCircleButton";
+yellowButtonIcon.classList.add("residentialTransition");
 displayNone(yellowButtonIcon);
 
 let headingServicesMenu = document.createElement("p");
@@ -171,29 +173,41 @@ concreteRestorationButton.onclick = ()=> {
 };
 
 residentialPaintingButton.onclick = ()=> {
-
     fadeOutAllButMe(residentialPaintingButton);
+    residentialBall.style.setProperty("transform", "translateY(-32.8vh)");
+
+        residentialBall.addEventListener("transitionend", ()=>{
+
+            residentialBall.style.setProperty("transform", "translate(-32.8vw, -32.8vh)");
+
+            residentialBall.addEventListener("transitionend", ()=>{
+
+
+
+
+                displayNone(servicesYellowLineContainer);
+                displayNone(servicesHeading);
+                displayNone(residentialPaintingButton);
+                displayNone(concreteRestorationButton);
+                displayNone(commercialPainting);
+                
+                servicesGridButtons.className = "servicesGridButtonsExpanded";
+        
+                createServicesDisplay(residentialPaintingButton, "Residential", "Painting", "lorem ipsum");
+        
+                returnDisplay(servicesYellowLineVertical);
+                returnDisplay(yellowButtonIcon);
+                returnDisplay(headingServicesMenu);
+                returnDisplay(bodyText);
+                returnDisplay(goBackButton);
+            });
+        });
+    
+
 
     
 
-    servicesHeading.addEventListener("transitionend", ()=>{
 
-        displayNone(servicesYellowLineContainer);
-        displayNone(servicesHeading);
-        displayNone(residentialPaintingButton);
-        displayNone(concreteRestorationButton);
-        displayNone(commercialPainting);
-        
-        servicesGridButtons.className = "servicesGridButtonsExpanded";
-
-        createServicesDisplay(residentialPaintingButton, "Residential", "Painting", "lorem ipsum");
-
-        returnDisplay(servicesYellowLineVertical);
-        returnDisplay(yellowButtonIcon);
-        returnDisplay(headingServicesMenu);
-        returnDisplay(bodyText);
-        returnDisplay(goBackButton);
-    });
 
 
 };
@@ -203,11 +217,15 @@ residentialPaintingButton.onclick = ()=> {
 
 goBackButton.addEventListener("click", ()=>{
 
+residentialBall.style.removeProperty("transform");
 returnDisplay(servicesYellowLineContainer);
 returnDisplay(servicesHeading);
 returnDisplay(concreteRestorationButton);
 returnDisplay(residentialPaintingButton);
 returnDisplay(commercialPaintingButton);
+
+
+//residentialBall.style.setProperty("transform", "translate(0%, 0%)");
 
 displayNone(servicesYellowLineVertical);
 displayNone(yellowButtonIcon);
