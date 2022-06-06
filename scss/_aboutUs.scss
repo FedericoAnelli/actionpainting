@@ -26,6 +26,23 @@
 // Styles images tiles
 .aboutUsImageSection{
     background-color: black;
+
+    &--first{
+        background-image: url("/media/images/building1.webp");
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+
+    }
+    &--second{
+        background-image: url("/media/images/building2.webp");
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+        object-fit: cover;
+
+    }
 }
 
 // Styles text tile

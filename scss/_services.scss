@@ -1,4 +1,5 @@
 $defaultPaddingSides: 5% !important;
+$animationDelay: 0.5s;
 
 // Main container for Services section
 .servicesMainContainer{
@@ -23,7 +24,11 @@ $defaultPaddingSides: 5% !important;
 .servicesImageTile{
     height: 100% ;
     width: 100% ;
-
+    background-image: url("/media/images/servicesImage.webp");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    object-fit: cover;
 }
 
 
@@ -60,7 +65,7 @@ $defaultPaddingSides: 5% !important;
     font-size: 0.4vh;
     width: 100%;
 
-    transition: width 1s, font-size 1s, top 0.5s;
+    transition: width $animationDelay, font-size $animationDelay, top $animationDelay;
 
 }
 
@@ -69,7 +74,7 @@ $defaultPaddingSides: 5% !important;
     align-self: flex-start;
     width: 0.3vw;
     height: 100%;
-    transition: opacity 1s;
+    transition: opacity $animationDelay;
 }
 
 
@@ -117,7 +122,7 @@ $defaultPaddingSides: 5% !important;
     align-items: center;
     justify-content: center;
     align-content: center;
-    transition: opacity 0.5s;
+    transition: opacity $animationDelay;
 }
 
 
@@ -140,7 +145,7 @@ $defaultPaddingSides: 5% !important;
     font-size: x-large;
     max-width: 15vh;
     text-align: center;
-    transform: opacity 0.5s;
+    transform: opacity $animationDelay;
     top: 78%;
 }
 
@@ -151,7 +156,7 @@ $defaultPaddingSides: 5% !important;
     font-size: 6vh;
     font-weight: 800;
     padding-left: 3% !important;
-    transition: opacity 0.5s;
+    transition: opacity $animationDelay;
 }
 
 
@@ -164,7 +169,7 @@ $defaultPaddingSides: 5% !important;
     align-self: baseline;
     justify-self: baseline;
     padding-left: 3% !important;
-    transition: opacity 0.5s;
+    transition: opacity $animationDelay;
 }
 
 
@@ -182,7 +187,7 @@ $defaultPaddingSides: 5% !important;
     color: white;
     padding-top: 10% !important;
     font-size: 3vh;
-    transition: opacity 0.5s;
+    transition: opacity $animationDelay;
 }
 
 //Go back button
@@ -226,17 +231,17 @@ $animationHeight: 55%;
 .residentialTransition{
     top: $animationHeight;
     left: 67%;
-    transition: transform 1s, top 1s, left 1s, right 1s;
+    transition: transform $animationDelay, top $animationDelay, left $animationDelay, right $animationDelay;
 }
 
 .concreteTransition{
     top: $animationHeight;
     left: 37%;
-    transition: transform 1s, top 1s, left 1s, right 1s;
+    transition: transform $animationDelay, top $animationDelay, left $animationDelay, right $animationDelay;
 }
 
 .commercialTransition{
     top: $animationHeight;
     left: 7%;
-    transition: transform 1s, top 1s, left 1s, right 1s;
+    transition: transform $animationDelay, top $animationDelay, left $animationDelay, right $animationDelay;
 }

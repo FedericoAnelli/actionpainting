@@ -95,6 +95,7 @@ function fadeOutAllButMe (object){
         fadeOut(commercialPaintingButton);
         fadeOut(residentialPaintingButton);
         fadeOut(servicesYellowLineContainer);
+        fadeOut(concreteRestorationText);
     }
 
     if (object == residentialPaintingButton)
@@ -103,6 +104,7 @@ function fadeOutAllButMe (object){
         fadeOut(concreteRestorationButton);
         fadeOut(commercialPaintingButton);
         fadeOut(servicesYellowLineContainer);
+        fadeOut(residentialPaintingText);
     }
     if (object == commercialPaintingButton)
     {
@@ -110,6 +112,7 @@ function fadeOutAllButMe (object){
         fadeOut(concreteRestorationButton);
         fadeOut(residentialPaintingButton);
         fadeOut(servicesYellowLineContainer);
+        fadeOut(commercialPaintingText);
     }
 
 
@@ -124,9 +127,12 @@ commercialPaintingButton.onclick = ()=> {
     commercialBall.style.setProperty("top", "6.3%");
 
     commercialBall.addEventListener("transitionend", ()=>{
-
+        
         commercialBall.style.setProperty("left", "5%");
+
         commercialBall.addEventListener("transitionend", ()=>{
+
+
 
         displayNone(servicesYellowLineContainer);
         displayNone(servicesHeading);
@@ -163,6 +169,9 @@ concreteRestorationButton.onclick = ()=> {
 
 
         concreteBall.addEventListener("transitionend", ()=>{
+
+ 
+
 
         displayNone(servicesYellowLineContainer);
         displayNone(servicesHeading);
@@ -203,6 +212,7 @@ residentialPaintingButton.onclick = ()=> {
 
             residentialBall.addEventListener("transitionend", ()=>{
 
+                console.log("ejecuta la segunda");
 
         
                 returnDisplay(servicesYellowLineVertical);
@@ -244,7 +254,6 @@ residentialBall.style.setProperty("position", "absolute");
 residentialBall.style.removeProperty("top");
 residentialBall.style.removeProperty("left");
 
-
 commercialBall.style.setProperty("position", "absolute");
 commercialBall.style.removeProperty("top");
 commercialBall.style.removeProperty("left");
@@ -253,11 +262,15 @@ concreteBall.style.setProperty("position", "absolute");
 concreteBall.style.removeProperty("top");
 concreteBall.style.removeProperty("left");
 
+
 returnDisplay(servicesYellowLineContainer);
 returnDisplay(servicesHeading);
 returnDisplay(concreteRestorationButton);
 returnDisplay(residentialPaintingButton);
 returnDisplay(commercialPaintingButton);
+returnDisplay(commercialPaintingText);
+returnDisplay(concreteRestorationText);
+returnDisplay(residentialPaintingText);
 
 
 //residentialBall.style.setProperty("transform", "translate(0%, 0%)");
@@ -270,6 +283,8 @@ displayNone(goBackButton);
 
 
 servicesGridButtons.className = "servicesGridButtons";
+
+
 
 
 })
