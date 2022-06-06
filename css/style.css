@@ -182,6 +182,7 @@
 }
 
 .homepageTextDiv {
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

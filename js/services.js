@@ -199,7 +199,7 @@ concreteRestorationButton.onclick = ()=> {
 
 
 
-residentialPaintingButton.onclick = ()=> {
+residentialPaintingButton.onclick = (a)=> {
     fadeOutAllButMe(residentialPaintingButton);
     createServicesDisplay(residentialPaintingButton, "Residential", "Painting", "We believe in the value of careful preparation. We can Assure you that you are opening to a trustworthy and reputable company. We work closely with you or your interior designer on paint colors and the style you envision.");
 
@@ -208,11 +208,11 @@ residentialPaintingButton.onclick = ()=> {
         residentialBall.addEventListener("transitionend", ()=>{
 
             residentialBall.style.setProperty("left", "5%");
-
+   
 
             residentialBall.addEventListener("transitionend", ()=>{
 
-                console.log("ejecuta la segunda");
+
 
         
                 returnDisplay(servicesYellowLineVertical);
@@ -253,6 +253,8 @@ goBackButton.addEventListener("click", ()=>{
 residentialBall.style.setProperty("position", "absolute");
 residentialBall.style.removeProperty("top");
 residentialBall.style.removeProperty("left");
+
+
 
 commercialBall.style.setProperty("position", "absolute");
 commercialBall.style.removeProperty("top");
