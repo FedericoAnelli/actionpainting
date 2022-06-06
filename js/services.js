@@ -121,11 +121,12 @@ commercialPaintingButton.onclick = ()=> {
     createServicesDisplay(commercialPaintingButton, "Commercial", "Painting", "lorem ipsum");
     fadeOutAllButMe(commercialPaintingButton);
 
-    commercialBall.style.setProperty("top", "10%");
+    commercialBall.style.setProperty("top", "6.3%");
 
     commercialBall.addEventListener("transitionend", ()=>{
 
-
+        commercialBall.style.setProperty("left", "5%");
+        commercialBall.addEventListener("transitionend", ()=>{
 
         displayNone(servicesYellowLineContainer);
         displayNone(servicesHeading);
@@ -145,6 +146,7 @@ commercialPaintingButton.onclick = ()=> {
         returnDisplay(bodyText);
         returnDisplay(goBackButton);
     });
+    });
 
 
 };
@@ -152,12 +154,12 @@ commercialPaintingButton.onclick = ()=> {
 concreteRestorationButton.onclick = ()=> {
     createServicesDisplay(concreteRestorationButton, "Concrete", "Restoration", "lorem ipsum");
     fadeOutAllButMe(concreteRestorationButton);
-    concreteBall.style.setProperty("top", "10%");
+    concreteBall.style.setProperty("top", "6.3%");
     
 
     concreteBall.addEventListener("transitionend", ()=>{
 
-        concreteBall.style.setProperty("left", "10%");
+        concreteBall.style.setProperty("left", "5%");
 
 
         concreteBall.addEventListener("transitionend", ()=>{
@@ -192,11 +194,11 @@ residentialPaintingButton.onclick = ()=> {
     fadeOutAllButMe(residentialPaintingButton);
     createServicesDisplay(residentialPaintingButton, "Residential", "Painting", "lorem ipsum");
 
-    residentialBall.style.setProperty("top", "10%");
+    residentialBall.style.setProperty("top", "6.3%");
 
         residentialBall.addEventListener("transitionend", ()=>{
 
-            residentialBall.style.setProperty("left", "10%");
+            residentialBall.style.setProperty("left", "5%");
 
 
             residentialBall.addEventListener("transitionend", ()=>{
@@ -245,6 +247,7 @@ residentialBall.style.removeProperty("left");
 
 commercialBall.style.setProperty("position", "absolute");
 commercialBall.style.removeProperty("top");
+commercialBall.style.removeProperty("left");
 
 concreteBall.style.setProperty("position", "absolute");
 concreteBall.style.removeProperty("top");

@@ -476,14 +476,14 @@
 }
 
 .paragraphButtons {
+  position: absolute;
   color: white;
   font-size: x-large;
-  padding-left: 5% !important;
-  padding-right: 5% !important;
-  padding-top: 10% !important;
+  max-width: 15vh;
   text-align: center;
   -webkit-transform: opacity 0.5s;
           transform: opacity 0.5s;
+  top: 78%;
 }
 
 .servicesHeading {

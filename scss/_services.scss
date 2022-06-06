@@ -77,7 +77,7 @@ $defaultPaddingSides: 5% !important;
 
 // Grid for the three yellow buttons on services
 .servicesGridButtons{
-
+    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -135,13 +135,13 @@ $defaultPaddingSides: 5% !important;
 
 
 .paragraphButtons{
+    position: absolute;
     color: white;
     font-size: x-large;
-    padding-left: 5% !important;
-    padding-right: 5% !important;
-    padding-top: 10% !important;
+    max-width: 15vh;
     text-align: center;
     transform: opacity 0.5s;
+    top: 78%;
 }
 
 
