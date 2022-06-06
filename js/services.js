@@ -118,7 +118,7 @@ function fadeOutAllButMe (object){
 
 
 commercialPaintingButton.onclick = ()=> {
-    createServicesDisplay(commercialPaintingButton, "Commercial", "Painting", "lorem ipsum");
+    createServicesDisplay(commercialPaintingButton, "Commercial", "Painting", "We offer outstanding commercial/industrial painting services. We understand that your image is everything to you and we make it our business to make you look good.");
     fadeOutAllButMe(commercialPaintingButton);
 
     commercialBall.style.setProperty("top", "6.3%");
@@ -152,7 +152,7 @@ commercialPaintingButton.onclick = ()=> {
 };
 
 concreteRestorationButton.onclick = ()=> {
-    createServicesDisplay(concreteRestorationButton, "Concrete", "Restoration", "lorem ipsum");
+    createServicesDisplay(concreteRestorationButton, "Concrete", "Restoration", "We provide concrete restoration, the 40 year inspection and painting bid packages to low –mid-high rise buildings. Let our license professional engineers provide you with an accurate inspection.");
     fadeOutAllButMe(concreteRestorationButton);
     concreteBall.style.setProperty("top", "6.3%");
     
@@ -192,7 +192,7 @@ concreteRestorationButton.onclick = ()=> {
 
 residentialPaintingButton.onclick = ()=> {
     fadeOutAllButMe(residentialPaintingButton);
-    createServicesDisplay(residentialPaintingButton, "Residential", "Painting", "lorem ipsum");
+    createServicesDisplay(residentialPaintingButton, "Residential", "Painting", "We believe in the value of careful preparation. We can Assure you that you are opening to a trustworthy and reputable company. We work closely with you or your interior designer on paint colors and the style you envision.");
 
     residentialBall.style.setProperty("top", "6.3%");
 
