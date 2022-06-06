@@ -173,7 +173,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: url("/media/images/backgroundHomescreen.webp");
+  background-image: url("https://federicoanelli.github.io/actionpainting/media/images/backgroundHomescreen.webp");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -263,7 +263,7 @@
 }
 
 .aboutUsImageSection--first {
-  background-image: url("/media/images/building1.webp");
+  background-image: url("https://federicoanelli.github.io/actionpainting/media/images/building1.webp");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -272,7 +272,7 @@
 }
 
 .aboutUsImageSection--second {
-  background-image: url("/media/images/building2.webp");
+  background-image: url("https://federicoanelli.github.io/actionpainting/media/images/building2.webp");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -379,7 +379,7 @@
 .servicesImageTile {
   height: 100%;
   width: 100%;
-  background-image: url("/media/images/servicesImage.webp");
+  background-image: url("https://federicoanelli.github.io/actionpainting/media/images/servicesImage.webp");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
