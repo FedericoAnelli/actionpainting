@@ -503,8 +503,8 @@
       align-self: baseline;
   justify-self: baseline;
   padding-left: 3% !important;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 .commercialPaintingBody {
@@ -522,8 +522,8 @@
   color: white;
   padding-top: 10% !important;
   font-size: 3vh;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 .goBackButtonDiv {
