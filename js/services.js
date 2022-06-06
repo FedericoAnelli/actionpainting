@@ -9,6 +9,8 @@ let residentialPaintingButton = document.getElementById("residentialPainting");
 let servicesGridButtons = document.getElementById("servicesGridButtons");
 let yellowCircleButton = document.getElementById("yellowCircleButton");
 let residentialBall = document.getElementById("residentialBall");
+let commercialBall = document.getElementById("commercialBall");
+let concreteBall = document.getElementById("concreteBall");
 
 let goBackButton = document.createElement("div");
 goBackButton.id = "goBackButton";
@@ -116,12 +118,14 @@ function fadeOutAllButMe (object){
 
 
 commercialPaintingButton.onclick = ()=> {
-
+    createServicesDisplay(commercialPaintingButton, "Commercial", "Painting", "lorem ipsum");
     fadeOutAllButMe(commercialPaintingButton);
 
-    
+    commercialBall.style.setProperty("top", "10%");
 
-    servicesHeading.addEventListener("transitionend", ()=>{
+    commercialBall.addEventListener("transitionend", ()=>{
+
+
 
         displayNone(servicesYellowLineContainer);
         displayNone(servicesHeading);
@@ -131,7 +135,9 @@ commercialPaintingButton.onclick = ()=> {
         
         servicesGridButtons.className = "servicesGridButtonsExpanded";
 
-        createServicesDisplay(commercialPaintingButton, "Commercial", "Painting", "lorem ipsum");
+ 
+
+        commercialBall.style.removeProperty("position");
 
         returnDisplay(servicesYellowLineVertical);
         returnDisplay(yellowButtonIcon);
@@ -144,12 +150,17 @@ commercialPaintingButton.onclick = ()=> {
 };
 
 concreteRestorationButton.onclick = ()=> {
-
+    createServicesDisplay(concreteRestorationButton, "Concrete", "Restoration", "lorem ipsum");
     fadeOutAllButMe(concreteRestorationButton);
-
+    concreteBall.style.setProperty("top", "10%");
     
 
-    servicesHeading.addEventListener("transitionend", ()=>{
+    concreteBall.addEventListener("transitionend", ()=>{
+
+        concreteBall.style.setProperty("left", "10%");
+
+
+        concreteBall.addEventListener("transitionend", ()=>{
 
         displayNone(servicesYellowLineContainer);
         displayNone(servicesHeading);
@@ -159,51 +170,59 @@ concreteRestorationButton.onclick = ()=> {
 
         
         servicesGridButtons.className = "servicesGridButtonsExpanded";
+        concreteBall.style.removeProperty("position");
 
-        createServicesDisplay(concreteRestorationButton, "Concrete", "Restoration", "lorem ipsum");
 
         returnDisplay(servicesYellowLineVertical);
         returnDisplay(yellowButtonIcon);
         returnDisplay(headingServicesMenu);
         returnDisplay(bodyText);
         returnDisplay(goBackButton);
+
+    });
+
     });
 
 
 };
 
-// First "translateY(-32.8vh)"); Second "translate(-32.8vw, -32.8vh)");
+
 
 residentialPaintingButton.onclick = ()=> {
     fadeOutAllButMe(residentialPaintingButton);
-    residentialBall.style.setProperty("transform", "translateY(-23.8em)");
+    createServicesDisplay(residentialPaintingButton, "Residential", "Painting", "lorem ipsum");
+
+    residentialBall.style.setProperty("top", "10%");
 
         residentialBall.addEventListener("transitionend", ()=>{
 
-            residentialBall.style.setProperty("transform", "translate(-41.8em, -23.8em)");
+            residentialBall.style.setProperty("left", "10%");
+
 
             residentialBall.addEventListener("transitionend", ()=>{
 
 
-
-
-                displayNone(servicesYellowLineContainer);
-                displayNone(servicesHeading);
-                displayNone(residentialPaintingButton);
-                displayNone(concreteRestorationButton);
-                displayNone(commercialPainting);
-                
-                servicesGridButtons.className = "servicesGridButtonsExpanded";
-        
-                createServicesDisplay(residentialPaintingButton, "Residential", "Painting", "lorem ipsum");
         
                 returnDisplay(servicesYellowLineVertical);
                 returnDisplay(yellowButtonIcon);
                 returnDisplay(headingServicesMenu);
                 returnDisplay(bodyText);
                 returnDisplay(goBackButton);
+
+                residentialBall.style.removeProperty("position");
+
+                displayNone(servicesYellowLineContainer);
+                displayNone(servicesHeading);
+                displayNone(residentialPaintingButton);
+                displayNone(concreteRestorationButton);
+                displayNone(commercialPainting);
+
+                servicesGridButtons.className = "servicesGridButtonsExpanded";
+
+
             });
-        });
+
+        });            
     
 
 
@@ -219,7 +238,18 @@ residentialPaintingButton.onclick = ()=> {
 
 goBackButton.addEventListener("click", ()=>{
 
-residentialBall.style.removeProperty("transform");
+residentialBall.style.setProperty("position", "absolute");
+residentialBall.style.removeProperty("top");
+residentialBall.style.removeProperty("left");
+
+
+commercialBall.style.setProperty("position", "absolute");
+commercialBall.style.removeProperty("top");
+
+concreteBall.style.setProperty("position", "absolute");
+concreteBall.style.removeProperty("top");
+concreteBall.style.removeProperty("left");
+
 returnDisplay(servicesYellowLineContainer);
 returnDisplay(servicesHeading);
 returnDisplay(concreteRestorationButton);

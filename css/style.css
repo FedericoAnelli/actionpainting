@@ -575,10 +575,30 @@
 }
 
 .residentialTransition {
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+  top: 55%;
+  left: 67%;
+  -webkit-transition: top 1s, left 1s, right 1s, -webkit-transform 1s;
+  transition: top 1s, left 1s, right 1s, -webkit-transform 1s;
+  transition: transform 1s, top 1s, left 1s, right 1s;
+  transition: transform 1s, top 1s, left 1s, right 1s, -webkit-transform 1s;
+}
+
+.concreteTransition {
+  top: 55%;
+  left: 37%;
+  -webkit-transition: top 1s, left 1s, right 1s, -webkit-transform 1s;
+  transition: top 1s, left 1s, right 1s, -webkit-transform 1s;
+  transition: transform 1s, top 1s, left 1s, right 1s;
+  transition: transform 1s, top 1s, left 1s, right 1s, -webkit-transform 1s;
+}
+
+.commercialTransition {
+  top: 55%;
+  left: 7%;
+  -webkit-transition: top 1s, left 1s, right 1s, -webkit-transform 1s;
+  transition: top 1s, left 1s, right 1s, -webkit-transform 1s;
+  transition: transform 1s, top 1s, left 1s, right 1s;
+  transition: transform 1s, top 1s, left 1s, right 1s, -webkit-transform 1s;
 }
 
 * {
