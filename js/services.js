@@ -172,13 +172,15 @@ concreteRestorationButton.onclick = ()=> {
 
 };
 
+// First "translateY(-32.8vh)"); Second "translate(-32.8vw, -32.8vh)");
+
 residentialPaintingButton.onclick = ()=> {
     fadeOutAllButMe(residentialPaintingButton);
-    residentialBall.style.setProperty("transform", "translateY(-32.8vh)");
+    residentialBall.style.setProperty("transform", "translateY(-23.8em)");
 
         residentialBall.addEventListener("transitionend", ()=>{
 
-            residentialBall.style.setProperty("transform", "translate(-32.8vw, -32.8vh)");
+            residentialBall.style.setProperty("transform", "translate(-41.8em, -23.8em)");
 
             residentialBall.addEventListener("transitionend", ()=>{
 
