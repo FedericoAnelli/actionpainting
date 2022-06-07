@@ -4,26 +4,28 @@ $animationDelay: 0.5s;
 // Main container for Services section
 .servicesMainContainer{
     height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
     display: flex;
 }
 
 // Services grid
 .servicesMainGrid{
     padding-top: $defaultTopSpacing;
-    height: 70%;
+    max-height: 70%;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     column-gap: 0;
     row-gap: 0;
+    overflow: hidden;
 }
 
 //Services image tile
 .servicesImageTile{
     height: 100% ;
-    width: 100% ;
+    max-width: 100% ;
     background-image: url("https://federicoanelli.github.io/actionpainting/media/images/servicesImage.webp");
     background-size: cover;
     background-position: top center;
@@ -36,7 +38,7 @@ $animationDelay: 0.5s;
 .servicesTextTile{
     background-color: $blackColor;
     height: 100%;
-    width: 100%;
+    max-width: 100%;
     font-family: $fontFamilyMain;
 
 }
@@ -135,8 +137,7 @@ $animationDelay: 0.5s;
     width: 15vh;
     align-self: center;
     justify-self: center;
-    cursor: pointer;
-
+    cursor: pointer;  
     
 
 }
