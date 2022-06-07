@@ -511,6 +511,12 @@
   cursor: pointer;
 }
 
+.servicesIcons {
+  width: 70%;
+  height: auto;
+  color: #323031;
+}
+
 .paragraphButtons {
   position: absolute;
   color: white;
