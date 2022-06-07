@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Action Painting Services</title>
 </head>
-<body>
+<body id="body">
     
     <!-- ########################## HEADER STARTS ########################## -->
     <header class="headerMainGrid">
@@ -35,7 +35,7 @@
                 <li id="aboutUsButton" class="menuItemsStyling"><a href="#aboutUs">WHO WE ARE</a></li>
                 <li id="servicesButton" class="menuItemsStyling"><a href="#services">SERVICES</a></li>
                 <li id="galleryButton" class="menuItemsStyling"><a href="#projectGallery">PROJECT GALLERY</a></li>
-                <li id="testimonialsButton" class="menuItemsStyling"><a href="#">TESTIMONIALS</a></li>
+                <li id="testimonialsButton" class="menuItemsStyling"><a href="#testimonials">TESTIMONIALS</a></li>
                 <li id="contactUsButton" class="menuItemsStyling"><a href="#">CONTACT US</a></li>
             </ul>
             
@@ -132,10 +132,25 @@
 <!-- ########################## PROJECT GALLERY STARTS ########################## -->
 <div id="projectGallery" class="projectGalleryMainContainer">
 
-    <div id="popUpImage" class="projectGalleryPhotoBig"><span id="closeButtonImage" class="material-symbols-outlined projectGalleryClosePhoto">
-        close
-        </span></div>
+    <div id="projectGalleryPhotoBigGrid" class="projectGalleryPhotoBigGrid">
 
+        <div class="projectGalleryTopDiv"><span id="closeButtonImage" class="material-symbols-outlined projectGalleryClosePhoto">
+            close
+            </span>
+        </div>
+
+        <div id="projectGalleryArrowBack" class="projectGalleryArrowBack"><span class="material-symbols-outlined projectGalleryArrowsStyling">
+            arrow_back_ios
+            </span></div>
+
+    <div id="popUpImage" class="projectGalleryPhotoBig"></div>
+
+    <div id="projectGalleryArrowForward" class="projectGalleryArrowForward">
+        <span class="material-symbols-outlined projectGalleryArrowsStyling">
+            arrow_forward_ios
+            </span>
+    </div>
+    </div>
 
     <div id="projectGrid" class="projectGalleryMainGrid">
 
@@ -147,11 +162,28 @@
 
 </div>
 <!-- ########################## PROJECT GALLERY ENDS ########################## -->
+<!-- ########################## TESTIMONIALS STARTS ########################## -->
+<div id="testimonials" class="testimonialsContainer">
+    <div id="testimonialsMainGrid" class="testimonialsMainGrid" data-aos="zoom-out">
 
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+<!-- ########################## TESTIMONIALS ENDS ########################## -->
 <!-- ########################## JS SECTION ########################## -->
 <script src="./js/services.js"></script>
 <script src="./js/header.js"></script>
 <script src="./js/photoGallery.js"></script>
+<script src="./js/testimonials.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();

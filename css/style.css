@@ -690,29 +690,171 @@
           filter: brightness(120%);
 }
 
-.projectGalleryPhotoBig {
+.projectGalleryPhotoBigGrid {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: black;
-  background-size: cover;
-  height: 50vh;
-  width: 50vw;
-  top: 35%;
-  left: 24.8%;
-  z-index: -900;
-  opacity: 0%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 70% 5%;
+      grid-template-columns: 5% 70% 5%;
+  -ms-grid-rows: 0.2fr 2fr;
+      grid-template-rows: 0.2fr 2fr;
+  -webkit-column-gap: 0;
+          column-gap: 0;
+  row-gap: 0;
+  overflow: hidden;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
+  height: 50vh;
+  width: 100%;
+  top: 30%;
+  left: 0%;
+  opacity: 0%;
+  z-index: -5;
+  -webkit-transition: opacity 0.09s, z-index 0.1s;
+  transition: opacity 0.09s, z-index 0.1s;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.projectGalleryPhotoBig {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / 3 / 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.projectGalleryTopDiv {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+  justify-self: flex-end;
+}
+
+.projectGalleryArrowBack {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 1 / 3 / 2;
+  cursor: pointer;
+  opacity: 50%;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.projectGalleryArrowBack:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.projectGalleryArrowForward {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 3 / 3 / 4;
+  cursor: pointer;
+  opacity: 50%;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.projectGalleryArrowForward:hover {
+  opacity: 100%;
 }
 
 .projectGalleryClosePhoto {
-  position: absolute;
   color: white !important;
-  font-size: 5vh;
-  right: -5%;
+  font-size: 2vh;
+  top: 0;
+  right: 0;
+  border-color: black !important;
+  opacity: 50%;
   cursor: pointer;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.projectGalleryClosePhoto:hover {
+  opacity: 100%;
+}
+
+.projectGalleryArrowsStyling {
+  font-size: 5vh;
+}
+
+.testimonialsContainer {
+  height: 100vh;
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.testimonialsMainGrid {
+  background-color: #323031;
+  position: relative;
+  padding-left: 5vw !important;
+  padding-right: 5vw !important;
+  padding-top: 25vh !important;
+  max-height: 70%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 0;
+          column-gap: 0;
+  row-gap: 0;
+}
+
+.testimonialsTile {
+  background-size: cover;
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+  cursor: pointer;
+  background-size: 50% !important;
+  background-repeat: no-repeat !important;
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
+}
+
+.testimonialsTile:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
 }
 
 * {

@@ -1,8 +1,14 @@
+// Global variables
+let imageSelected = 0;
+
 // DOM elements
 let projectGrid = document.getElementById("projectGrid");
 let baseURL = document.getElementById("base");
 let popUpImage = document.getElementById("popUpImage");
 let closeButton = document.getElementById("closeButtonImage");
+let projectGalleryPhotoBigGrid = document.getElementById("projectGalleryPhotoBigGrid");
+let projectGalleryArrowBack = document.getElementById("projectGalleryArrowBack");
+
 
 // Photos Array
 let photos = [];
@@ -38,19 +44,33 @@ for (let i=0; i<totalPhotosApartmentCondominiums; i++){
     gridElement.setAttribute("data-aos-delay", "1");
     gridElement.addEventListener("click", (event)=>{
         popUpImage.style.background = "url("+photos[i].image+")";
-        popUpImage.style.opacity = "100%";
-        popUpImage.style.zIndex = "900";
-        popUpImage.style.backgroundRepeat = "no-repeat";
-        popUpImage.style.backgroundPosition = "center";
+        projectGalleryPhotoBigGrid.style.opacity = "100%";
+        projectGalleryPhotoBigGrid.style.zIndex = "5";
+        imageSelected = i;
         projectGrid.style.filter = "brightness(20%)";
+
 
     })
     projectGrid.appendChild(gridElement);
 }
 
 closeButton.addEventListener("click", ()=>{
-    popUpImage.style.opacity = "0";
-    popUpImage.style.zIndex = "-900";
+    projectGalleryPhotoBigGrid.style.opacity = "0";
+    projectGalleryPhotoBigGrid.style.zIndex = "-5";
     projectGrid.style.filter = "brightness(100%)";
 });
 
+projectGalleryArrowBack.addEventListener("click", ()=>{
+    if(imageSelected>0){
+    imageSelected--;
+    popUpImage.style.background = "url("+photos[imageSelected].image+")";
+}
+}
+);
+
+projectGalleryArrowForward.addEventListener("click", ()=>{
+    if(totalPhotosApartmentCondominiums-1>imageSelected){
+    imageSelected++;
+    popUpImage.style.background = "url("+photos[imageSelected].image+")";}
+}
+);
