@@ -653,7 +653,38 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.projectGalleryMainGrid {
+  padding-top: 25vh !important;
+  max-height: 70%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  -webkit-column-gap: 0;
+          column-gap: 0;
+  row-gap: 0;
   overflow: hidden;
+}
+
+.projectGalleryTile {
+  background-size: cover;
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+  cursor: pointer;
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
+}
+
+.projectGalleryTile:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
 }
 
 * {
