@@ -30,7 +30,6 @@ class Testimonial{
 for (let i = 0; i<totalTestimonials; i++){
 
     testimonials.push(new Testimonial(folderTestimonials_Logos+"testimonials"+i+".webp"));
-    console.log(testimonials[i].logo);
     let gridElement = document.createElement("div");
     gridElement.id = "testimonial"+i;
     gridElement.className = "testimonialsTile";

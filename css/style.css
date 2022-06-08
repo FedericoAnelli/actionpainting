@@ -94,6 +94,10 @@
   font-family: "Outfit", sans-serif;
   font-size: medium;
   font-weight: 500;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .menuYellowStrikethrough {
@@ -208,6 +212,10 @@
           align-items: center;
   padding-left: 10vw !important;
   padding-right: 10vw !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .homepageHeaderStyling {
@@ -259,9 +267,7 @@
 
 .aboutUsMainGrid {
   position: relative;
-  padding-left: 5vw !important;
-  padding-right: 5vw !important;
-  padding-top: 25vh !important;
+  padding: 25vh 5vw 0 5vw !important;
   height: 70%;
   width: 100%;
   display: -ms-grid;
@@ -273,6 +279,10 @@
   -webkit-column-gap: 2vw;
           column-gap: 2vw;
   row-gap: 0px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .aboutUsImageSection {
@@ -314,8 +324,7 @@
   background-color: #f1c744;
   width: 30%;
   height: 0.8%;
-  margin-top: 3.5vh !important;
-  margin-bottom: 3.5vh !important;
+  margin: 3.5vh 0 3.5vh 0 !important;
 }
 
 .aboutUs30 {
@@ -366,7 +375,7 @@
 }
 
 .aboutUsParagraph {
-  font-size: x-large;
+  font-size: large;
   font-weight: 200;
 }
 
@@ -414,16 +423,12 @@
 }
 
 .servicesTextMiddleContainer {
-  padding-top: 5% !important;
-  padding-left: 5% !important;
-  padding-right: 5% !important;
+  padding: 5% 5% 0 5% !important;
 }
 
 .servicesYellowLineContainer {
   width: 20%;
-  margin-top: 5% !important;
-  margin-bottom: 8% !important;
-  margin-left: 3% !important;
+  margin: 5% 0 8% 3% !important;
 }
 
 .servicesYellowLine {
@@ -834,9 +839,7 @@
 .testimonialsMainGrid {
   background-color: #323031;
   position: relative;
-  padding-left: 5vw !important;
-  padding-right: 5vw !important;
-  padding-top: 25vh !important;
+  padding: 25vh 5vw 0 5vw !important;
   max-height: 70%;
   width: 100%;
   display: -ms-grid;

@@ -11,7 +11,7 @@
 // Project gallery main grid
 .projectGalleryMainGrid{
 
-    padding-top: $defaultTopSpacing;
+    padding-top: $defaultTopSpacing !important;
     max-height: 70%;
     width: 100%;
     display: grid;

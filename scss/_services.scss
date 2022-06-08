@@ -1,4 +1,4 @@
-$defaultPaddingSides: 5% !important;
+$defaultPaddingSides: 5%;
 $animationDelay: 0.5s;
 
 // Main container for Services section
@@ -11,7 +11,7 @@ $animationDelay: 0.5s;
 
 // Services grid
 .servicesMainGrid{
-    padding-top: $defaultTopSpacing;
+    padding-top: $defaultTopSpacing !important;
     max-height: 70%;
     width: 100%;
     display: grid;
@@ -45,9 +45,7 @@ $animationDelay: 0.5s;
 
 .servicesTextMiddleContainer{
 
-    padding-top: $defaultPaddingSides;
-    padding-left: $defaultPaddingSides;
-    padding-right: $defaultPaddingSides;
+    padding: $defaultPaddingSides $defaultPaddingSides 0 $defaultPaddingSides !important;
     
 }
 
@@ -55,9 +53,7 @@ $animationDelay: 0.5s;
 .servicesYellowLineContainer{
 
     width: 20%;
-    margin-top: 5% !important;
-    margin-bottom: 8% !important;
-    margin-left: 3% !important;
+    margin: 5% 0 8% 3% !important;
 }
 
 
