@@ -237,6 +237,15 @@
   height: 8vh;
   background-color: #f1c744;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.homepageContactUsButton:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .aboutUsMainContainer {
@@ -844,17 +853,18 @@
   -webkit-filter: brightness(90%);
           filter: brightness(90%);
   cursor: pointer;
-  background-size: 50% !important;
+  background-size: 40% !important;
   background-repeat: no-repeat !important;
-  -webkit-transition: -webkit-filter 0.5s;
-  transition: -webkit-filter 0.5s;
-  transition: filter 0.5s;
-  transition: filter 0.5s, -webkit-filter 0.5s;
+  -webkit-transition: -webkit-filter 0.5s background-size 1s;
+  transition: -webkit-filter 0.5s background-size 1s;
+  transition: filter 0.5s background-size 1s;
+  transition: filter 0.5s background-size 1s, -webkit-filter 0.5s background-size 1s;
 }
 
 .testimonialsTile:hover {
-  -webkit-filter: brightness(120%);
-          filter: brightness(120%);
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+  background-size: 45% !important;
 }
 
 * {

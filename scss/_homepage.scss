@@ -55,5 +55,11 @@
     height: 8vh;
     background-color: $yellowColor;
     cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.homepageContactUsButton:hover{
+    transform: scale(1.1);
+
 }
 

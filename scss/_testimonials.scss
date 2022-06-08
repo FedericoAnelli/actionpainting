@@ -27,11 +27,12 @@
     background-size: cover;
     filter: brightness(90%);
     cursor: pointer;
-    background-size: 50% !important;
+    background-size: 40% !important;
     background-repeat: no-repeat !important;
-    transition: filter 0.5s;
+    transition: filter 0.5s background-size 1s;
 }
     
 .testimonialsTile:hover{
-    filter: brightness(120%);
+    filter: brightness(100%);
+    background-size: 45% !important;
 }

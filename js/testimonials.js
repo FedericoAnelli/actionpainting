@@ -28,6 +28,7 @@ class Testimonial{
 
 
 for (let i = 0; i<totalTestimonials; i++){
+
     testimonials.push(new Testimonial(folderTestimonials_Logos+"testimonials"+i+".webp"));
     console.log(testimonials[i].logo);
     let gridElement = document.createElement("div");
@@ -36,8 +37,8 @@ for (let i = 0; i<totalTestimonials; i++){
     gridElement.style.background = "url("+testimonials[i].logo+")";
     gridElement.style.backgroundSize = "cover";
     gridElement.style.backgroundPosition = "center";
-    gridElement.setAttribute("data-aos", "fade-zoom-in");
+    gridElement.setAttribute("data-aos", "fade-up");
     gridElement.setAttribute("data-aos-easing", "ease");
-    gridElement.setAttribute("data-aos-delay", "1");
+    gridElement.setAttribute("data-aos-duration", 1500-(i*250));
     testimonialsMainGrid.appendChild(gridElement);
 }
