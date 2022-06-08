@@ -14,7 +14,7 @@ let projectGalleryArrowBack = document.getElementById("projectGalleryArrowBack")
 let photos = [];
 
 // Amount of Photos in File
-let totalPhotosApartmentCondominiums = 16;
+let totalPhotosApartmentCondominiums = 12;
 
 // Folder roots
 let folderApartmentCondominiums = baseURL.getAttributeNode("href").value+"media/images/projectGallery_apartmentCondominium/";
