@@ -44,6 +44,11 @@
       align-content: center;
 }
 
+.gridContactLinks {
+  color: white !important;
+  font-weight: 300;
+}
+
 .menuItemsStylingContacto {
   font-family: "Outfit", sans-serif;
   font-size: medium;
@@ -310,6 +315,7 @@
 .aboutUsTextSection {
   background-color: white;
   font-family: "Outfit", sans-serif;
+  position: relative;
 }
 
 .aboutUsTopParagraph {
@@ -333,7 +339,7 @@
 
 .aboutUs30 {
   color: #f1c744;
-  font-size: 30vh;
+  font-size: 25vh;
   font-weight: 900;
   z-index: 100;
 }
@@ -342,7 +348,7 @@
   display: -ms-grid;
   display: grid;
   position: absolute;
-  bottom: -3%;
+  bottom: -4.5%;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
   -ms-grid-rows: 1fr;
@@ -359,20 +365,19 @@
   -ms-flex-line-pack: center;
       align-content: center;
   justify-items: center;
-  width: 43%;
+  width: 100%;
 }
 
 .aboutUsBottomLine {
   position: absolute;
   bottom: 0;
   background-color: #323031;
-  width: 43% !important;
+  width: 100%;
   height: 8%;
 }
 
 .aboutUsYearsWorkingExperience {
-  max-width: 22.62vw;
-  font-size: 2.4vw;
+  font-size: 30px;
   justify-self: flex-start;
   font-weight: 200;
   overflow: hidden;

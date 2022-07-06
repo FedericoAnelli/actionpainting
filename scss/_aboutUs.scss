@@ -48,7 +48,7 @@
 .aboutUsTextSection{
     background-color: white;
     font-family: $fontFamilyMain;
-
+    position: relative;
 }
 
 .aboutUsTopParagraph{
@@ -70,7 +70,7 @@
 // Styles big 30 text
 .aboutUs30{
     color: $yellowColor;
-    font-size: 30vh;
+    font-size: 25vh;
     font-weight: 900;
     z-index: 100;
 }
@@ -79,7 +79,7 @@
 .aboutUsWorkingExperienceGrid{
     display: grid;
     position: absolute;
-    bottom: -3%;
+    bottom: -4.5%;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     column-gap: 2%;
@@ -88,7 +88,7 @@
     justify-content: center;
     align-content: center;
     justify-items: center;
-    width: 43%;
+    width: 100%;
 
 }
 
@@ -97,14 +97,14 @@
     position: absolute;
     bottom: 0;
     background-color: $blackColor;
-    width: 43% !important;
+    width: 100%;
     height: 8%;
 }
 
 // Styles Years Working Experience text
 .aboutUsYearsWorkingExperience{
-    max-width: 22.62vw;
-    font-size: 2.4vw;
+
+    font-size: 30px;
     justify-self: flex-start;
     font-weight: 200;
     overflow: hidden;
