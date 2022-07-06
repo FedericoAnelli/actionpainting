@@ -6,6 +6,7 @@
 @import "./services";
 @import "./projectGallery";
 @import "./testimonials";
+@import "./contactUs";
 
 * {
     margin: 0 !important;
@@ -23,4 +24,7 @@ a{
     z-index: 1;
 }
 
-
+body{
+    overflow-x: hidden;
+    height: 600vh;
+}
