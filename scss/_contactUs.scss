@@ -87,7 +87,12 @@
     row-gap: 0;
     user-select: none;
     align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
 
+.contactUsContactButtons:hover{
+    transform: scale(1.1);
 }
 
 .contactUsSendButton{
