@@ -26,8 +26,8 @@
   display: -ms-grid;
   display: grid;
   background-color: #323031;
-  -ms-grid-columns: 1fr 1fr 2fr;
-      grid-template-columns: 1fr 1fr 2fr;
+  -ms-grid-columns: 2fr 1fr 2fr;
+      grid-template-columns: 2fr 1fr 2fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   -webkit-column-gap: 0px;
