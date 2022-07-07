@@ -348,7 +348,7 @@
   display: -ms-grid;
   display: grid;
   position: absolute;
-  bottom: -4.5%;
+  bottom: -4.2%;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
   -ms-grid-rows: 1fr;
