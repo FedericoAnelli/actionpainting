@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <base id="base" href="https://federicoanelli.github.io/actionpainting/" target="_self">
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5K4HSF1JMP"></script>
 <script>
@@ -243,9 +244,7 @@
 
 
 
-<!-- ########################## JS SECTION ########################## -->
-<script src="https://smtpjs.com/v3/smtp.js"></script>  
-<script src="./js/contactUsForm.js"></script>
+<!-- ########################## JS SECTION ########################## --> 
 <script src="./js/services.js"></script>
 <script src="./js/header.js"></script>
 <script src="./js/photoGallery.js"></script>
@@ -254,8 +253,15 @@
 <script>
     AOS.init();
   </script>
-
-
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init("qXV_XN7IgM6S6ww9N");
+})();
+</script>
+<script src="./js/contactUsForm.js"></script>
 <!-- ########################## JS SECTION ########################## -->
 </body>
 </html>
